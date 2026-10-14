@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TheraPaid privacy policy and support information.">
+  <meta name="color-scheme" content="light dark">
+  <title>Privacy & Support — TheraPaid</title>
+  <style>
+    :root {
+      --bg: #f5f2eb;
+      --surface: rgba(255, 255, 255, .78);
+      --surface-strong: #fff;
+      --ink: #18312d;
+      --muted: #62716d;
+      --line: rgba(24, 49, 45, .13);
+      --accent: #167c6a;
+      --accent-dark: #0d5d50;
+      --accent-soft: #d8eee7;
+      --warm: #e6a85c;
+      --shadow: 0 24px 70px rgba(33, 61, 54, .11);
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 4%, rgba(230, 168, 92, .22), transparent 27rem),
+        radial-gradient(circle at 92% 16%, rgba(22, 124, 106, .17), transparent 31rem),
+        var(--bg);
+      font-family: ui-rounded, "SF Pro Rounded", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent-dark); text-underline-offset: 3px; }
+    a:hover { color: var(--accent); }
+    a:focus-visible, summary:focus-visible {
+      outline: 3px solid rgba(22, 124, 106, .35);
+      outline-offset: 4px;
+      border-radius: 6px;
+    }
+
+    .shell { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 28px 0;
+    }
+
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: -.02em; }
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 13px;
+      color: white;
+      background: linear-gradient(145deg, #299985, #0d6557);
+      box-shadow: 0 9px 22px rgba(22, 124, 106, .25);
+      font-size: 21px;
+    }
+
+    nav { display: flex; gap: 8px; }
+    nav a {
+      padding: 9px 13px;
+      border-radius: 999px;
+      color: var(--ink);
+      font-size: .92rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    nav a:hover { background: rgba(255, 255, 255, .64); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(48px, 9vw, 104px) clamp(24px, 7vw, 76px);
+      border: 1px solid rgba(255, 255, 255, .7);
+      border-radius: 34px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, .92), rgba(247, 251, 248, .68));
+      box-shadow: var(--shadow);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -80px;
+      bottom: -110px;
+      width: 350px;
+      height: 350px;
+      border: 70px solid rgba(22, 124, 106, .08);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 18px;
+      color: var(--accent-dark);
+      font-size: .78rem;
+      font-weight: 850;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { content: ""; width: 24px; height: 2px; background: var(--warm); }
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(2.65rem, 8vw, 5.7rem);
+      line-height: .98;
+      letter-spacing: -.065em;
+    }
+    .hero p:not(.eyebrow) {
+      max-width: 670px;
+      margin: 26px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+    }
+    .updated {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      background: rgba(255, 255, 255, .65);
+      font-size: .82rem;
+      font-weight: 700;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 230px minmax(0, 1fr);
+      gap: 54px;
+      padding: 76px 0 92px;
+    }
+    aside { position: relative; }
+    .toc {
+      position: sticky;
+      top: 24px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, .5);
+    }
+    .toc strong { display: block; margin-bottom: 10px; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; }
+    .toc a { display: block; padding: 6px 0; color: var(--muted); font-size: .9rem; text-decoration: none; }
+    .toc a:hover { color: var(--accent); }
+
+    main { min-width: 0; }
+    section { scroll-margin-top: 28px; margin-bottom: 60px; }
+    h2 { margin: 0 0 18px; font-size: clamp(1.65rem, 3vw, 2.25rem); line-height: 1.15; letter-spacing: -.035em; }
+    h3 { margin: 28px 0 7px; font-size: 1.05rem; }
+    p { margin: 0 0 14px; }
+    ul { margin: 12px 0 0; padding-left: 1.25rem; }
+    li { margin: 8px 0; }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 64px;
+    }
+    .summary-card {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--surface);
+    }
+    .summary-icon { display: block; margin-bottom: 12px; font-size: 1.3rem; }
+    .summary-card strong { display: block; margin-bottom: 4px; }
+    .summary-card span { color: var(--muted); font-size: .9rem; line-height: 1.45; }
+
+    .callout {
+      padding: 22px 24px;
+      border-left: 4px solid var(--accent);
+      border-radius: 4px 18px 18px 4px;
+      background: var(--accent-soft);
+    }
+    .callout p:last-child { margin-bottom: 0; }
+
+    .support-card {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(26px, 5vw, 44px);
+      border-radius: var(--radius);
+      color: white;
+      background: linear-gradient(135deg, #173d36, #0d6859);
+      box-shadow: 0 20px 55px rgba(13, 93, 80, .2);
+    }
+    .support-card::after {
+      content: "✦";
+      position: absolute;
+      right: 28px;
+      top: 18px;
+      color: rgba(255, 255, 255, .14);
+      font-size: 6rem;
+      line-height: 1;
+    }
+    .support-card h2 { position: relative; margin-bottom: 10px; }
+    .support-card p { position: relative; max-width: 590px; color: rgba(255, 255, 255, .75); }
+    .email-button {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-top: 14px;
+      padding: 13px 18px;
+      border-radius: 13px;
+      color: var(--accent-dark);
+      background: white;
+      font-weight: 800;
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .14);
+    }
+    .email-button:hover { color: var(--accent); transform: translateY(-1px); }
+    .support-note { margin-top: 18px !important; font-size: .88rem; }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 26px 0 38px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .84rem;
+    }
+
+    @media (max-width: 760px) {
+      .shell { width: min(100% - 24px, 680px); }
+      header { padding: 18px 2px; }
+      nav a:first-child { display: none; }
+      .hero { border-radius: 25px; }
+      .layout { grid-template-columns: 1fr; gap: 0; padding-top: 48px; }
+      aside { display: none; }
+      .summary { grid-template-columns: 1fr; }
+      section { margin-bottom: 48px; }
+      footer { flex-direction: column; }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #101b19;
+        --surface: rgba(27, 45, 41, .8);
+        --surface-strong: #1a2b27;
+        --ink: #edf6f2;
+        --muted: #a9bbb5;
+        --line: rgba(225, 243, 237, .13);
+        --accent: #62c9b3;
+        --accent-dark: #7ed8c5;
+        --accent-soft: #173e36;
+        --shadow: 0 24px 70px rgba(0, 0, 0, .22);
+      }
+      body {
+        background:
+          radial-gradient(circle at 8% 4%, rgba(193, 127, 51, .13), transparent 27rem),
+          radial-gradient(circle at 92% 16%, rgba(48, 166, 144, .13), transparent 31rem),
+          var(--bg);
+      }
+      .hero { border-color: var(--line); background: linear-gradient(135deg, rgba(29, 49, 44, .96), rgba(19, 38, 34, .78)); }
+      nav a:hover, .toc, .updated { background: rgba(255, 255, 255, .06); }
+      .email-button { color: #0d5d50; }
+    }
+
+    @media print {
+      body { background: white; }
+      header, aside { display: none; }
+      .shell { width: 100%; }
+      .hero { padding: 30px 0; border: 0; box-shadow: none; }
+      .layout { display: block; padding: 30px 0; }
+      .support-card { color: black; background: white; border: 1px solid #ccc; box-shadow: none; }
+      .support-card p { color: #444; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="brand"><span class="brand-mark" aria-hidden="true">T</span> TheraPaid</div>
+      <nav aria-label="Primary navigation">
+        <a href="#privacy">Privacy</a>
+        <a href="#support">Support</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <p class="eyebrow">Your practice. Your data.</p>
+      <h1>Privacy, made clear.</h1>
+      <p>TheraPaid helps organize practice finances without ads, third-party analytics, or developer-operated accounts.</p>
+      <span class="updated">Effective October 14, 2026</span>
+    </div>
+
+    <div class="layout">
+      <aside>
+        <nav class="toc" aria-label="Page contents">
+          <strong>On this page</strong>
+          <a href="#privacy">Overview</a>
+          <a href="#data">Data you enter</a>
+          <a href="#storage">Storage &amp; iCloud</a>
+          <a href="#purchases">Purchases</a>
+          <a href="#sharing">Sharing &amp; exports</a>
+          <a href="#control">Your choices</a>
+          <a href="#children">Children</a>
+          <a href="#changes">Policy changes</a>
+          <a href="#support">Support</a>
+        </nav>
+      </aside>
+
+      <main>
+        <div class="summary" aria-label="Privacy summary">
+          <div class="summary-card">
+            <span class="summary-icon" aria-hidden="true">◉</span>
+            <strong>No ads or tracking</strong>
+            <span>No advertising SDKs or cross-app tracking.</span>
+          </div>
+          <div class="summary-card">
+            <span class="summary-icon" aria-hidden="true">⌁</span>
+            <strong>Private iCloud sync</strong>
+            <span>App records sync through your private iCloud database.</span>
+          </div>
+          <div class="summary-card">
+            <span class="summary-icon" aria-hidden="true">◇</span>
+            <strong>No developer account</strong>
+            <span>TheraPaid requires no account with us.</span>
+          </div>
+        </div>
+
+        <section id="privacy">
+          <p class="eyebrow">Privacy policy</p>
+          <h2>Overview</h2>
+          <p>This Privacy Policy explains how TheraPaid handles information when you use the app. TheraPaid does not operate an external user-account system or developer-controlled server for your practice records. We do not sell your data, use it for advertising, or use it to track you across apps or websites.</p>
+          <div class="callout">
+            <p><strong>In short:</strong> information you enter is used to provide app features and remains under your control through your device, private iCloud database, and files you choose to export.</p>
+          </div>
+        </section>
+
+        <section id="data">
+          <h2>Information handled by TheraPaid</h2>
+          <p>Depending on how you use the app, you may enter:</p>
+          <ul>
+            <li><strong>Client details:</strong> names, phone numbers, email addresses, default fees, and notes.</li>
+            <li><strong>Session details:</strong> dates, fees, payment status, and notes.</li>
+            <li><strong>Business expense details:</strong> dates, categories, descriptions, and amounts.</li>
+            <li><strong>App preferences:</strong> invoice templates and recently used settings.</li>
+          </ul>
+          <p>TheraPaid processes this information on your device to provide recordkeeping, summaries, invoice text, backup, and tax-estimate features. We do not receive or access this app content through a developer-controlled backend.</p>
+          <h3>Sensitive information</h3>
+          <p>Client and session notes may contain sensitive or health-related information if you choose to enter it. Enter only information you are authorized to store. You are responsible for determining whether your use meets professional, legal, contractual, and regulatory obligations that apply to your practice.</p>
+        </section>
+
+        <section id="storage">
+          <h2>Storage and iCloud</h2>
+          <p>TheraPaid uses Apple SwiftData and CloudKit. App records are stored on your device and, when iCloud is available, sync through your private iCloud database so they can remain available across devices signed in to your Apple Account.</p>
+          <p>Apple processes iCloud data under its own terms and privacy policy. Your iCloud settings, Apple Account status, device backups, and Apple’s retention practices can affect storage and availability. Learn more in <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">Apple’s Privacy Policy</a>.</p>
+          <p>TheraPaid also stores limited preferences on your device using Apple-provided storage. These preferences do not create a profile with us.</p>
+        </section>
+
+        <section id="purchases">
+          <h2>Optional purchases</h2>
+          <p>TheraPaid offers optional tips through Apple’s in-app purchase system. Apple processes payment and transaction information. We do not directly receive your full payment-card details. Apple may provide transaction status and sales reporting needed to deliver, verify, and administer purchases, subject to Apple’s policies.</p>
+        </section>
+
+        <section id="sharing">
+          <h2>Sharing and data exports</h2>
+          <p>TheraPaid does not sell or share app records with advertisers or data brokers. Data leaves the app only through services you direct or Apple services needed for app operation, including:</p>
+          <ul>
+            <li><strong>iCloud sync:</strong> records sync through Apple CloudKit.</li>
+            <li><strong>JSON export:</strong> you may create and save or share a backup containing your app records.</li>
+            <li><strong>Invoice sharing:</strong> you may send generated invoice text using apps or services you select.</li>
+            <li><strong>Support email:</strong> information you voluntarily include in a support request is sent through your email provider and received by us.</li>
+          </ul>
+          <p>Files or text you export are no longer controlled by TheraPaid. Their handling depends on the destination, people, and services you choose.</p>
+        </section>
+
+        <section id="control">
+          <h2>Your choices and data retention</h2>
+          <p>You control the information you enter. You can edit or delete records in the app and export a JSON backup. Records synced with iCloud may remain in backups or be retained by Apple according to your settings and Apple’s policies.</p>
+          <p>TheraPaid has no developer account containing your practice records, so we cannot retrieve, correct, or delete those records for you. You can manage iCloud through your device and Apple Account settings. Before deleting the app or changing iCloud settings, export any data you want to keep.</p>
+        </section>
+
+        <section id="security">
+          <h2>Security</h2>
+          <p>TheraPaid relies on security features provided by iOS, iPadOS, SwiftData, and CloudKit. No storage method is guaranteed to be completely secure. Protect your device and Apple Account with a strong passcode, current software, and two-factor authentication.</p>
+        </section>
+
+        <section id="children">
+          <h2>Children’s privacy</h2>
+          <p>TheraPaid is a professional finance and practice-management tool and is not directed to children under 13. We do not knowingly collect children’s personal information through a developer-operated service.</p>
+        </section>
+
+        <section id="changes">
+          <h2>Changes to this policy</h2>
+          <p>We may update this policy as TheraPaid changes or legal requirements evolve. Updated versions will appear on this page with a revised effective date.</p>
+        </section>
+
+        <section id="support" class="support-card">
+          <h2>Need help?</h2>
+          <p>For app support, privacy questions, purchase issues, or feedback, email TheraPaid support. Include your app version and device model when useful, but do not send real client records, clinical notes, or other sensitive information.</p>
+          <a class="email-button" href="mailto:thetinykings@icloud.com?subject=TheraPaid%20Support">✉ thetinykings@icloud.com</a>
+          <p class="support-note">For billing or refund requests, Apple may require you to use <a href="https://reportaproblem.apple.com/" rel="noopener noreferrer" style="color: white">reportaproblem.apple.com</a>.</p>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      <span>© 2026 TheraPaid. All rights reserved.</span>
+      <span>Privacy &amp; Support</span>
+    </footer>
+  </div>
+</body>
+</html>
