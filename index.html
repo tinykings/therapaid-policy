@@ -48,11 +48,7 @@
     .shell { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
 
     header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      padding: 28px 0;
+      padding: 24px 0;
     }
 
     .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: -.02em; }
@@ -67,17 +63,6 @@
       box-shadow: 0 9px 22px rgba(22, 124, 106, .25);
       font-size: 21px;
     }
-
-    nav { display: flex; gap: 8px; }
-    nav a {
-      padding: 9px 13px;
-      border-radius: 999px;
-      color: var(--ink);
-      font-size: .92rem;
-      font-weight: 700;
-      text-decoration: none;
-    }
-    nav a:hover { background: rgba(255, 255, 255, .64); }
 
     .hero {
       position: relative;
@@ -137,23 +122,10 @@
     }
 
     .layout {
-      display: grid;
-      grid-template-columns: 230px minmax(0, 1fr);
-      gap: 54px;
-      padding: 76px 0 92px;
+      width: min(760px, 100%);
+      margin: 0 auto;
+      padding: 64px 0 92px;
     }
-    aside { position: relative; }
-    .toc {
-      position: sticky;
-      top: 24px;
-      padding: 20px;
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      background: rgba(255, 255, 255, .5);
-    }
-    .toc strong { display: block; margin-bottom: 10px; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; }
-    .toc a { display: block; padding: 6px 0; color: var(--muted); font-size: .9rem; text-decoration: none; }
-    .toc a:hover { color: var(--accent); }
 
     main { min-width: 0; }
     section { scroll-margin-top: 28px; margin-bottom: 60px; }
@@ -237,10 +209,8 @@
     @media (max-width: 760px) {
       .shell { width: min(100% - 24px, 680px); }
       header { padding: 18px 2px; }
-      nav a:first-child { display: none; }
       .hero { border-radius: 25px; }
-      .layout { grid-template-columns: 1fr; gap: 0; padding-top: 48px; }
-      aside { display: none; }
+      .layout { padding-top: 48px; }
       .summary { grid-template-columns: 1fr; }
       section { margin-bottom: 48px; }
       footer { flex-direction: column; }
@@ -266,13 +236,13 @@
           var(--bg);
       }
       .hero { border-color: var(--line); background: linear-gradient(135deg, rgba(29, 49, 44, .96), rgba(19, 38, 34, .78)); }
-      nav a:hover, .toc, .updated { background: rgba(255, 255, 255, .06); }
+      .updated { background: rgba(255, 255, 255, .06); }
       .email-button { color: #0d5d50; }
     }
 
     @media print {
       body { background: white; }
-      header, aside { display: none; }
+      header { display: none; }
       .shell { width: 100%; }
       .hero { padding: 30px 0; border: 0; box-shadow: none; }
       .layout { display: block; padding: 30px 0; }
@@ -285,10 +255,6 @@
   <div class="shell">
     <header>
       <div class="brand"><span class="brand-mark" aria-hidden="true">T</span> TheraPaid</div>
-      <nav aria-label="Primary navigation">
-        <a href="#privacy">Privacy</a>
-        <a href="#support">Support</a>
-      </nav>
     </header>
 
     <div class="hero">
@@ -299,21 +265,6 @@
     </div>
 
     <div class="layout">
-      <aside>
-        <nav class="toc" aria-label="Page contents">
-          <strong>On this page</strong>
-          <a href="#privacy">Overview</a>
-          <a href="#data">Data you enter</a>
-          <a href="#storage">Storage &amp; iCloud</a>
-          <a href="#purchases">Purchases</a>
-          <a href="#sharing">Sharing &amp; exports</a>
-          <a href="#control">Your choices</a>
-          <a href="#children">Children</a>
-          <a href="#changes">Policy changes</a>
-          <a href="#support">Support</a>
-        </nav>
-      </aside>
-
       <main>
         <div class="summary" aria-label="Privacy summary">
           <div class="summary-card">
